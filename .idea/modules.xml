@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaPropramWS.iml" filepath="$PROJECT_DIR$/JavaPropramWS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module_Java123/Module_Java123.iml" filepath="$PROJECT_DIR$/Module_Java123/Module_Java123.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Module_Javacodingke/Module_Javacodingke.iml" filepath="$PROJECT_DIR$/Module_Javacodingke/Module_Javacodingke.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+本章
+
+比较
+comparable
+comparator
+
+克隆Clone
+不需要再计算机内存空间，比new 效率高
+
+System类
+Runtime类
+
+如果方法之前有native 修饰符，通常无法看到源码，一般由c或者c++实现
+
+BigIntger类  大整数类
+
+lambda表达式(闭包)
+
+一个接口中只有一个抽象方法，此时推荐使用闭包
