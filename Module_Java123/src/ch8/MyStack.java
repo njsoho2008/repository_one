@@ -18,7 +18,7 @@ public class MyStack {
     public int getSize() {
         return list.size();
     }
-
+//返回栈顶层元素
     public Object peek() {
         return list.get(getSize() - 1);
 
