@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextBoundsType;
 import javafx.stage.Stage;
 
 public class KeyEventDemo extends Application {
@@ -13,6 +14,8 @@ public class KeyEventDemo extends Application {
 
         Pane pane = new Pane();
         Text text = new Text(20, 20, "A");
+        text.setBoundsType(TextBoundsType.LOGICAL);
+
         pane.getChildren().add(text);
         text.setOnKeyPressed(event -> {
             switch (event.getCode()) {
