@@ -3,6 +3,7 @@ package ch13;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+//要在当前目录下进行测试，IJ环境不行
 
 public class WriteData {
     public static void writedata(){

@@ -3,7 +3,7 @@ package ch13;
 import java.io.File;
 import java.util.Date;
 
-//要在当前目录下进行测试，AS环境不行
+//要在当前目录下进行测试，IJ环境不行
 public class TestFile {
     public static void Tfile(){
         File file=new File("/image/example_01.jpg");
