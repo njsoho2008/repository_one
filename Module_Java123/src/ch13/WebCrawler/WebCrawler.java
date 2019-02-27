@@ -23,7 +23,7 @@ public class WebCrawler {
         ArrayList<String> listOfTraveredURLs = new ArrayList<>();
 
         listOfPendingURLs.add(stringURL);
-        while (!listOfPendingURLs.isEmpty() && listOfTraveredURLs.size() <= 10) {
+        while (!listOfPendingURLs.isEmpty() && listOfTraveredURLs.size() <= 100) {
             String urlString = listOfPendingURLs.remove(0);
             if (!listOfTraveredURLs.contains(urlString)) {
                 listOfTraveredURLs.add(urlString);
