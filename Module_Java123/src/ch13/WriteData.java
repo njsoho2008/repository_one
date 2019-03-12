@@ -1,7 +1,9 @@
+
 package ch13;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.PrintWriter;
 //要在当前目录下进行测试，IJ环境不行
 
@@ -11,6 +13,16 @@ public class WriteData {
         if(file.exists()){
             System.out.println("file is already exists");
             System.exit(1);
+        }else{
+            try {
+                file.createNewFile();
+                System.out.println("现场当即创建‘scores.txt’");
+            } catch (IOException e) {
+                e.printStackTrace();
+                System.out.println("创建scores.txt");
+            }
+
+
         }
         try {
 //            如果scores.txt不存在，则会创建这个文件，并且向文本文件内写入内容

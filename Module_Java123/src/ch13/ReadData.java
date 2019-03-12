@@ -2,11 +2,25 @@ package ch13;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class ReadData {
     public static void main(String[] args){
-        File file=new File("scores.txt");
+        File file=new File("c:/scores.txt");
+        if(file.exists()){
+            System.out.println("scores.txt is exists");
+//            System.exit(1);
+        }else {
+            try {
+                file.createNewFile();
+                //给文件重命名
+               File file1=new File(file.getParentFile(),"my_myscores.txt");
+               file1.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
         try {
 //            从一个文件中读取数据 来创建input
             Scanner input=new Scanner(file);
