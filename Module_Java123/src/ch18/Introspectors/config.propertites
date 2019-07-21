@@ -1,0 +1,5 @@
+bean.name=ch18.Introspectors.Config
+
+bean.username=admin
+bean.password=123456
+bean.url=http://www.baidu.com

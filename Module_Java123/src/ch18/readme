@@ -1,0 +1,17 @@
+reflection
+反射  与内省
+
+Class类是一切的反射根源
+Class类表示什么？
+得到Class类的对象有三种方式：
+第一种形式：Object类中的getClass()方法
+第二种形式：类.class
+第三种形式：通过Class类的forName方法
+
+
+JavaBean
+
+BeanUtils 工具类 http://apache.org
+
+
+内省

@@ -1,0 +1,33 @@
+MUTEX 的例子选讲
+
+statements 语句块
+
+synchronized 关键字 只能用于修饰方法和语句块
+
+
+synchronized(expr){
+
+statements;
+
+}
+expr 必须是某个对象的引用，并且不能为null，如果该对象被某个线程锁定，则在解锁之前（即其他某个线程主动释放），
+这个线程将被阻塞等待，直到之前的线程释放解锁expr指向的对象。一直到之前的线程释放后，这个线程或者其他的线程才
+有机会获得 expr对象上的锁，以锁定并操作该对象，进入该线程的独享操作阶段，直到它自己主动释放expr对象
+
+因此  synchronized(expr) ,准确的说是某个线程获得了与expr对象关联的monitor锁，因此该线程可以操作
+该expr对象了
+
+
+
+synchronized 关键字作用域范围很大，每个线程都要串行的经过synchronized 保护的共享区域
+
+synchronized 包括monitor enter 和monitor exit 两个JVM指令；它能够保证在任何时候在线程执行到 monitor enter
+成功之前都必须从主内存中获取数据；而不是从CPU缓存中；在monitor exit 运行成功之后，共享变量被更新后的值必须被刷新到
+主内存中
+synchronized 的指令严格遵守 java happens-before 规则，一个monitor exit指令之前必定要有一个 monitor enter
+
+
+如果synchronized关键字作用域越大，代表着其效率越低，并发的优势就有可能不那么明显了
+因此synchronized关键字尽可能只作用域共享资源（数据）的读写作用域，
+
+比如不要写在run方法的前面，失去了并发优势

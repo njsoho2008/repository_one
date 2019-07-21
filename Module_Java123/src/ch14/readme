@@ -1,1 +1,29 @@
 线程
+Thread 类是线程类 但是并不是说Thread类就是线程
+仅仅是线程的代理人，Thread类可以操控线程  就想java的对象引用一样
+
+当你创建Thread类的实例时，在Java平台内部，一个真正的线程也就诞生了
+
+Thread 负责线程本身相关的职责和控制，Runnable则负责逻辑执行单元部分
+
+
+
+使用线程：
+线程的作用就是执行一个方法，直到方法结束，线程就完成了使命
+启动一个线程 start()方法调用run()
+
+run()方法通过覆盖重写Thread类中的run()方法来实现自定义的功能
+
+因为Java是单继承的，为了解决单继承的问题
+Runnable接口解决了单继承问题 Runnable接口中只有个抽象的run()方法等待去实现
+Thread implements Runnable接口
+Thread类里面重写了Runable中的run方法
+  @Override
+    public void run() {
+        if (target != null) {
+            target.run();
+        }
+    }
+
+    并行：就是两个任务同时运行(多个CPU)
+    并发：是指两个任务同时请求运行，而处理器一次只能接受一个任务，就会把两个任务安排轮流执行，由于CPU时间片运行时间较短,就会感觉两个任务在同时执行

@@ -1,0 +1,15 @@
+JSON  JavaScript Object Notation
+
+JSON 数据格式的特点
+JSON 建构于两种结构：
+1、 “名称/值”对的集合
+2.、 值的有序列表（数组）
+
+JSON 表示名称 / 值对的方式 ：
+{ "firstName": "vince", "lastName":"ma", "email": "finally_m@foxmail.com" }
+
+表示数组
+
+{ "user": [ { "firstName": "vince", "lastName":"ma", "email": "finally_m@foxmail.com" },
+           { "firstName": "lin", "lastName":"jacks", "email": “jacks@qq.com”}]
+}

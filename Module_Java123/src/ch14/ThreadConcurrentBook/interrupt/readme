@@ -1,0 +1,16 @@
+线程的生命周期
+
+start（new）
+Runnable
+running
+blocked
+terminated
+
+
+讲授顺序：
+
+1 interrupt 文件夹
+
+2 isinterrupt  文件夹
+
+3 interrupted 文件夹

@@ -1,0 +1,34 @@
+java中的双冒号操作符
+定义
+双冒号运算操作符是类方法的句柄，lambda表达式的一种简写，这种简写的学名叫eta-conversion或者叫η-conversion。
+
+通常的情况下:
+
+把 x -> System.out.println(x) 简化为 System.out::println 的过程称之为 eta-conversion
+
+把 System.out::println 简化为 x -> System.out.println(x) 的过程称之为 eta-expansion
+
+范式:
+类名::方法名
+
+注意:
+
+方法后面并没有()
+懒加载方法是否调用要看调用方使用情况
+使用范例
+方法调用
+person -> person.getAge();
+可以替换成
+Person::getAge
+
+x -> System.out.println(x)
+可以替换成
+System.out::println
+out是一个PrintStream类的对象，println是该类的方法，依据x的类型来重载方法
+
+创建对象
+() -> new ArrayList<>();
+可以替换为
+
+ArrayList::new
+new关键字实际上调用的是ArrayList的构造方法

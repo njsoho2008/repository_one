@@ -1,0 +1,80 @@
+注解技术
+
+Annotation 技术
+
+1、认识Annotation
+2、系统定义的Annotation
+3、自定义Annotation
+4、Retention和RetentionPolicy
+5、反射与Annotation
+6、@Documented注解
+7、@Target注解
+8、@Inherited注解
+
+
+
+Retention和RetentionPolicy
+Annotation要想决定其作用的范围，通过@Retention指定，
+而Retention指定的范围由RetentiontPolicy决定，RetentionPolicy指定了三种范围：
+
+public static final RetentionPolicy SOURCE   在java源程序中存在
+public static final RetentionPolicy CLASS    在java生成的class中存在
+public static final RetentionPolicy RUNTIME  在java运行的时候存在
+
+@Target 所定义的目标
+
+1，TYPE：作用于接口、类、枚举、注解；
+2，FIELD：作用于成员变量（字段、枚举的常量）；
+3，METHOD：作用于方法；
+4，PARAMETER：作用于方法的参数；
+5，CONSTRUCTOR：作用于构造函数；
+6，LOCAL_VARIABLE：作用于局部变量；
+7，ANNOTATION_TYPE：作用于Annotation。例如如下代码：
+
+
+
+public enum ElementType {
+    /** Class, interface (including annotation type), or enum declaration */
+    TYPE,
+
+    /** Field declaration (includes enum constants) */
+    FIELD,
+
+    /** Method declaration */
+    METHOD,
+
+    /** Formal parameter declaration */
+    PARAMETER,
+
+    /** Constructor declaration */
+    CONSTRUCTOR,
+
+    /** Local variable declaration */
+    LOCAL_VARIABLE,
+
+    /** Annotation type declaration */
+    ANNOTATION_TYPE,
+
+    /** Package declaration */
+    PACKAGE,
+
+    /**
+     * Type parameter declaration
+     *
+     * @since 1.8
+     */
+    TYPE_PARAMETER,
+
+    /**
+     * Use of a type
+     *
+     * @since 1.8
+     */
+    TYPE_USE
+}
+
+
+
+
+
+
