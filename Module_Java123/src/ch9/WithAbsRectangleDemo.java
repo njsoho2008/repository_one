@@ -1,19 +1,22 @@
 package ch9;
 
-public class WithAbsRectangleDemo extends GeometircObject {
+public class WithAbsRectangleDemo extends GeometircObject implements Comparable<WithAbsRectangleDemo> {
     private double height;
     private double width;
 
     public WithAbsRectangleDemo() {
-        super();
+//        super();
     }
+
     public WithAbsRectangleDemo(double height, double width) {
         this.height = height;
         this.width = width;
     }
+
     public double getHeight() {
         return height;
-}
+    }
+
     public void setHeight(double height) {
         this.height = height;
     }
@@ -28,19 +31,29 @@ public class WithAbsRectangleDemo extends GeometircObject {
 
     @Override
     public double getArea() {
-        return this.height*this.width;
+        return this.height * this.width;
     }
 
     @Override
     public double getPerimeter() {
-        return 2*(this.height+this.width);
+        return 2 * (this.height + this.width);
     }
 
-    public String toString(){
+    public String toString() {
         System.out.println("WithAbsRectangle");
-        return  "WithAbsRectangle";
+        return "WithAbsRectangle";
     }
 
+
+    @Override
+    public int compareTo(WithAbsRectangleDemo o) {
+        if (this.getArea() > o.getArea())
+
+            return -1;
+        else
+            return 0;
+
+    }
 
 
 }

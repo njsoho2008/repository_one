@@ -1,11 +1,11 @@
 package ch9;
 
-public class WithAbsCircelDemo extends GeometircObject {
+public class WithAbsCircelDemo extends GeometircObject implements Comparable<WithAbsCircelDemo>, Cloneable {
     private double radius;
-    public WithAbsCircelDemo(){
+
+    public WithAbsCircelDemo() {
         super();
     }
-
 
 
     public WithAbsCircelDemo(double radius) {
@@ -15,6 +15,7 @@ public class WithAbsCircelDemo extends GeometircObject {
     public double getRadius() {
         return radius;
     }
+
     public void setRadius(double radius) {
         this.radius = radius;
     }
@@ -28,9 +29,32 @@ public class WithAbsCircelDemo extends GeometircObject {
     public double getPerimeter() {
         return 2 * Math.PI * radius;
     }
-    public String toString(){
+
+    public String toString() {
         System.out.println("AbsCircleDmeo");
-        return  "AbsCircleDmeo";
+        return "AbsCircleDmeo";
     }
+
+   @Override
+    public int compareTo(WithAbsCircelDemo o) {
+        if (this.getArea() > o.getArea())
+            return -1;
+        else
+            return 0;
+
+    }
+
+    @Override
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+    }
+
+
 
 }

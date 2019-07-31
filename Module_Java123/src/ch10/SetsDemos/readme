@@ -1,0 +1,7 @@
+Set 扩展了Collection接口，但是没有引入新的方法和常量，但是规定set集合里面不能有重复的元素
+
+AbstractSet 继承了AbstractCollection 并部分实现了Set接口
+AbstractSet 类提供了equals方法和hashcode方法的具体实现
+一个集合的散列码是这个集合的所有元素的散列码之和
+
+hashcode()方法的返回值：Object对象中的这个方法能够根据对象在内存中的地址返回一个唯一能代表该对象的int值

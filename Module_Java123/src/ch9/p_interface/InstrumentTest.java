@@ -1,7 +1,6 @@
-package ch9;
+package ch9.p_interface;
 
 public class InstrumentTest {
-
 
     public void testPlay(Instrument i) {
         i.play();
@@ -9,11 +8,14 @@ public class InstrumentTest {
 
     public static void main(String[] args) {
         InstrumentTest it = new InstrumentTest();
+
+//        匿名类
         it.testPlay(new Piano());
-        it.testPlay(new Trumpet());
+        Trumpet trumpet=new Trumpet();
+
+        it.testPlay(trumpet);
     }
 }
-
 
 class Piano implements Instrument {
     public void play() {

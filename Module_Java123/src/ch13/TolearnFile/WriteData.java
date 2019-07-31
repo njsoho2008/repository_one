@@ -1,5 +1,5 @@
 
-package ch13;
+package ch13.TolearnFile;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,13 +21,10 @@ public class WriteData {
                 e.printStackTrace();
                 System.out.println("创建scores.txt");
             }
-
-
         }
         try {
 //            如果scores.txt不存在，则会创建这个文件，并且向文本文件内写入内容
 //            在命令行模式下运行
-
             PrintWriter output=new PrintWriter(file);
             output.print("Johe T Smith");
             output.print(90);
@@ -38,7 +35,6 @@ public class WriteData {
             e.printStackTrace();
         }
     }
-
     public static void main(String[] args){
         writedata();
     }

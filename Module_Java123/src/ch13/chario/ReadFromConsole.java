@@ -1,6 +1,7 @@
 package ch13.chario;
 
 import java.io.*;
+import java.util.Scanner;
 
 public class ReadFromConsole {
     public static void main(String[] args) {
@@ -15,7 +16,7 @@ public class ReadFromConsole {
             }
         }
 //从控制台输入，没有使用scaner类 ，以前经常用 注意哦
-
+        Scanner input=new Scanner(System.in);
         BufferedReader bfr = null;
         FileWriter fw = null;
         String context = null;
@@ -32,10 +33,16 @@ public class ReadFromConsole {
             fw.close();
             bfr.close();
             System.out.println("输入结束！");
+
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
     }
+
+
+
 
 }

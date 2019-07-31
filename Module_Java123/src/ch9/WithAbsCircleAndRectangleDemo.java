@@ -19,7 +19,7 @@ public class WithAbsCircleAndRectangleDemo {
 
 
     }
-
+//抽象类的好处
     public static boolean equalArea(GeometircObject object1, GeometircObject object2) {
         return object1.getArea() == object2.getArea();
 

@@ -1,0 +1,13 @@
+Collections 工具类 可以操作合集和list线性表的类的静态方法
+
+ArrayList  LinkedList
+
+数组线性表类 ArrayList
+
+链表类LinkedList均实现了List接口。
+ArrayList用数组存储元素，这个数组的动态的，如果数组元素的个数超过了数组的容量，
+则创建一个更大的数组，并将当前数组的所有元素都复制到新数组中。适合通过数组下标随机访问元素的需求
+
+LinkedList 如果需要在线性表的起始位置插入或者删除，则LinkedList更好
+
+

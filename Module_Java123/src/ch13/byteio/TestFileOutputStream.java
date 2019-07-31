@@ -10,7 +10,6 @@ public class TestFileOutputStream {
         try (FileOutputStream fos = new FileOutputStream("c:/temp.dat")) {
             for(int i=1;i<11;i++){
                 fos.write(i);
-
             }
         } catch (IOException e) {
             e.printStackTrace();

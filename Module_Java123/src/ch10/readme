@@ -1,3 +1,12 @@
-Java 泛型
+1Java 泛型与ArrayList类
 
-ArrayList类
+2 常用集合
+
+
+泛型：动机：在编译期检测出错误
+Java泛型（Generics）
+可以定义 泛型类型  也可以为静态方法 定义泛型方法
+
+受限制的泛型  <E extends GeometircObject>
+
+通配泛型  分为三种类型 非受限制通配 受限通配 下限通配

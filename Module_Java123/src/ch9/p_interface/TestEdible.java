@@ -1,4 +1,6 @@
-package ch9;
+package ch9.p_interface;
+
+import ch9.p_interface.*;
 
 public class TestEdible {
     public static void main(String[] args){

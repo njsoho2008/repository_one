@@ -3,8 +3,19 @@
 内部类
 
 ArrayList
-和 Comparable
+和
+标记接口Cloneable 说明：一个方法体为空的接口称为标记接口
 
-Cloneable
+//////////////////////
+Comparable
+和
+Comparator接口
+
+Comparable 用于比较已经实现了Comparable 的类的对象
+Comparator 用于比较没有实现Comparable接口的类的对象
+
+Comparable 接口来比较元素称为使用自然顺序进行比较，使用Comparaor 接口来比较元素称为使用比较器来进行比较
+
+
 泛型初步
 
